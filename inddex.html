@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table , th ,td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+        div{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tbody id="render">
+                <!-- hasil renderan -->
+            </tbody>
+
+            <tr>
+                <td><button id="sort" onclick="fnSortVertikal(0)">sort</button></td>
+                <td><button id="sort" onclick="fnSortVertikal(1)">sort</button></td>
+                <td><button id="sort" onclick="fnSortVertikal(2)">sort</button></td>
+                <td><button id="sort" onclick="fnSortVertikal(3)">sort</button></td>
+                <td> </td>
+            </tr>
+        </table>
+        
+        <div>
+            <input type="text">
+            <button class="btn-2" onclick="fnLeft()">LeftRotate</button>
+            <button class="btn-2" onclick="fnRight()">RightRotate</button>
+            <p><button class="btn-2" onclick="fnReset()">Reset</button></p>
+        </div>
+    </div>
+<script src="./index.js"></script>
+</body>
+</html>
