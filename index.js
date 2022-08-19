@@ -125,15 +125,24 @@ const fnSortVertikal = (idx) => {
 function fnReset() {
     numbers = structuredClone(numbersOrig);
     fnRenderTd(numbers);
+    let jumlahPutar = document.getElementById("imputPutar")
+    jumlahPutar.value= ""
   }
   
 //default
 fnRenderTd()
 
 /////////////////////////////////////////////////////////////
-// ///////////////////// LEFT ROTATE ///////////////////////
+/////////////////////// LEFT ROTATE ////////////////////////
 ///////////////////////////////////////////////////////////
+
+let jumlahPutar = document.getElementById("imputPutar").value
+
+console.log(jumlahPutar)
+
 function mirror(numbers) {
+
+
     return numbers.map((arr) => arr.reverse());
   }
   
@@ -158,16 +167,28 @@ function mirror(numbers) {
   }
   
   function fnLeft() {
-    numbers = rotate(numbers, "left");
-    fnRenderTd(numbers);
+
+    let jumlahPutar = document.getElementById("imputPutar").value
+
+for (let i = 0; i < jumlahPutar; i++) {
+  numbers = rotate(numbers, "left");
+  fnRenderTd(numbers);
+  console.log(jumlahPutar)
+}
+   
   }
-  
+
   /////////////////////////////////////////////////////////////
   // ///////////////////// RIGHT ROTATE ///////////////////////
   ///////////////////////////////////////////////////////////
   function fnRight() {
+
+    let jumlahPutar = document.getElementById("imputPutar").value
+
+for (let i = 0; i < jumlahPutar; i++) {
     numbers = rotate(numbers, "right");
     fnRenderTd(numbers);
+}
   }
   
   fnRenderTd(numbers);
